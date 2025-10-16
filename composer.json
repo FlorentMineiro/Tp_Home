@@ -1,0 +1,15 @@
+{
+    "name": "minei/tp_home",
+    "autoload": {
+        "psr-4": {
+            "poo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Florent Mineiro",
+            "email": "florent.mineiro.93@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -3,8 +3,8 @@ namespace poo;
 
 class Cabane extends Batiment
 {
-    public function __construct(string $nomCabane,int $superficieCabane,string $typeCabane,int $netageCabane)
+    public function __construct(string $nomCabane,int $superficieCabane,string $typeCabane,int $nbEtageCabane)
     {
-        parent::__construct(string $nomBat,int $superficieBat,string $typeBat,int $nbEtageBat);
+        parent::__construct($nomCabane,$superficieCabane,$typeCabane,$nbEtageCabane);
     }
 }

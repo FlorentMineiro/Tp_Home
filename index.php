@@ -58,7 +58,16 @@ foreach($batiment as $indexBatiment)
     foreach($indexBatiment as $indexTypeBatiment)
     {
         if ($indexTypeBatiment instanceof Maison)
-        echo "Nom Batiment : ".$indexTypeBatiment->getNomBatiment()." - ".$indexTypeBatiment->getSuperficieBatiment()."m² - ".$indexTypeBatiment->getTypeBatiment()." - ".$indexTypeBatiment->getNbEtageBatiment()." - ".$indexTypeBatiment->getCheminee()." - ".$indexTypeBatiment->getGarageMaison()."\n";
+        {
+                echo "Nom Maison : ".$indexTypeBatiment->getNomBatiment()." - ".$indexTypeBatiment->getSuperficieBatiment()."m² - ".$indexTypeBatiment->getTypeBatiment()." - ".$indexTypeBatiment->getNbEtageBatiment()." - ".($indexTypeBatiment->getCheminee()?'true':'false')." - ".($indexTypeBatiment->getGarageMaison()?'true':'false')."\n";
+        }elseif($indexTypeBatiment instanceof Immeuble)
+        {
+                 echo "Nom Immeuble : ".$indexTypeBatiment->getNomBatiment()." - ".$indexTypeBatiment->getSuperficieBatiment()."m² - ".$indexTypeBatiment->getTypeBatiment()." - ".$indexTypeBatiment->getNbEtageBatiment()." - ".($indexTypeBatiment->getAscenseur()?'true':'false')." - ".$indexTypeBatiment->getNbAppatement()." - ".($indexTypeBatiment->getGarage()?'true':'false')."\n";
+        }elseif($indexTypeBatiment instanceof Cabane)
+        {
+                 echo "Nom Cabane : ".$indexTypeBatiment->getNomBatiment()." - ".$indexTypeBatiment->getSuperficieBatiment()."m² - ".$indexTypeBatiment->getTypeBatiment()." - ".$indexTypeBatiment->getNbEtageBatiment()."\n";
+        }
+        
     }
 }
 

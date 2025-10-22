@@ -13,7 +13,7 @@ class Immeuble extends Batiment
         parent::__construct($nomImmeuble,$superficieImmeuble,$typeImmeuble,$nbEtageImmeuble);
         $this->ascenseur=$ascenseur;
         $this->nbAppartement=$nbAppartement;
-        $this->garage=$garage;
+        $this->monGarage=false;
     }
 
     public function getNbAppatement():int 
@@ -26,7 +26,7 @@ class Immeuble extends Batiment
     }
     public function getGarage():bool 
     {
-        return $this->garage;
+        return $this->monGarage;
     }
     public function setGarage(bool $garage):bool
     {

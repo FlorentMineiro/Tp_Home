@@ -7,6 +7,7 @@ class Batiment
     private int $superficieBatiment;
     private string $typeBatiment;
     private int $nbEtageBatiment;
+  
 
     public function __construct(string $nomBat,int $superficieBat,string $typeBat,int $nbEtageBat)
     {
